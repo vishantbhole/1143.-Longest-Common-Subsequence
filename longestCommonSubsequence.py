@@ -20,3 +20,7 @@ if __name__ == "__main__":
     text1 = "abcde"
     text2 = "ace"
     print("Output is : ", sol.longestCommonSubsequence(text1,text2))
+
+    text3 = "abc"
+    text4 = "abc"
+    print("Output is : ", sol.longestCommonSubsequence(text3,text4))
