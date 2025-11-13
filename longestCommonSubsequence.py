@@ -13,3 +13,14 @@ class Solution:
                 else:
                     dp[i][j] = max(dp[i][j + 1], dp[i + 1][j])
         return dp[0][0]
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    text1 = "abcde"
+    text2 = "ace"
+    print("Output is : ", sol.longestCommonSubsequence(text1,text2))
+
+    text3 = "abc"
+    text4 = "abc"
+    print("Output is : ", sol.longestCommonSubsequence(text3,text4))
