@@ -8,3 +8,19 @@ class Solution:
 
         for i in range(len(text1) - 1, -1 , -1):
             for j in range(len(text2) - 1, -1, -1):
+                if text1[i] == text2[j]:
+                    dp[i][j] = 1 + dp[i + 1][j + 1]
+                else:
+                    dp[i][j] = max(dp[i][j + 1], dp[i + 1][j])
+        return dp[0][0]
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    text1 = "abcde"
+    text2 = "ace"
+    print("Output is : ", sol.longestCommonSubsequence(text1,text2))
+
+    text3 = "abc"
+    text4 = "abc"
+    print("Output is : ", sol.longestCommonSubsequence(text3,text4))
